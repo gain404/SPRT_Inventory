@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class UIManager : MonoBehaviour
@@ -16,6 +14,10 @@ public class UIManager : MonoBehaviour
             return _instance;
         }
     }
+    
+    [SerializeField] private Character _character;
+    public Character character => _character;
+    
     private void Awake()
     {
         if(_instance == null)

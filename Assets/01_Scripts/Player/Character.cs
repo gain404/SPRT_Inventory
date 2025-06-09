@@ -1,7 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class Status
 {
     public int attack;
@@ -10,7 +9,7 @@ public class Status
     public int fatality;
 }
 
-
+[System.Serializable]
 public class Character : MonoBehaviour
 {
     public string id;

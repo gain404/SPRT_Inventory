@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -16,8 +14,12 @@ public class GameManager : MonoBehaviour
             return _instance;
         }
     }
-    
+
+    [SerializeField] private ItemData _itemData;
     public ItemData itemData { get; set; }
+    
+    [SerializeField] private Character _character;
+    public Character character { get; set; }
     
     private void Awake()
     {
