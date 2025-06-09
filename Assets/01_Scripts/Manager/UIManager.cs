@@ -2,32 +2,25 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
-    private static UIManager _instance;
-    public static UIManager Instance
-    {
-        get
-        {
-            if(_instance == null)
-            {
-                _instance = new GameObject("UIManager").AddComponent<UIManager>();
-            }
-            return _instance;
-        }
-    }
-    
-    [SerializeField] private Character _character;
-    public Character character => _character;
+    public static UIManager Instance { get; private set; }
+
+    [SerializeField] private UIMainMenu uiMainMenu;
+    public UIMainMenu UIMainMenu => uiMainMenu;
+    [SerializeField] private UIStatus uiStatus;
+    public UIStatus UIStatus => uiStatus;
+    [SerializeField] private UIInventory uiInventory;
+    public UIInventory UIInventory => uiInventory;
     
     private void Awake()
     {
-        if(_instance == null)
+        if (Instance == null)
         {
-            _instance = this;
+            Instance = this;
             DontDestroyOnLoad(gameObject);
         }
         else
         {
-            if(_instance != this)
+            if(Instance != this)
             {
                 Destroy(gameObject);
             }

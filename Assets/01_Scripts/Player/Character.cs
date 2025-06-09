@@ -9,11 +9,15 @@ public class Status
     public int fatality;
 }
 
-[System.Serializable]
 public class Character : MonoBehaviour
 {
     public string id;
     public int level;
     public int gold;
     public Status status;
+
+    private void Awake()
+    {
+        GameManager.Instance.character = this;
+    }
 }

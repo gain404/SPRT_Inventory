@@ -2,35 +2,21 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    private static GameManager _instance;
-    public static GameManager Instance
-    {
-        get
-        {
-            if(_instance == null)
-            {
-                _instance = new GameObject("GameManager").AddComponent<GameManager>();
-            }
-            return _instance;
-        }
-    }
-
-    [SerializeField] private ItemData _itemData;
-    public ItemData itemData { get; set; }
+    //싱글톤 선언
+    public static GameManager Instance { get; private set; }
     
-    [SerializeField] private Character _character;
     public Character character { get; set; }
     
     private void Awake()
     {
-        if(_instance == null)
+        if (Instance == null)
         {
-            _instance = this;
+            Instance = this;
             DontDestroyOnLoad(gameObject);
         }
         else
         {
-            if(_instance != this)
+            if (Instance != this)
             {
                 Destroy(gameObject);
             }

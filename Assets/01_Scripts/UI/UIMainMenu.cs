@@ -10,11 +10,11 @@ public class UIMainMenu : MonoBehaviour
     public GameObject statusPanel;
     public GameObject inventoryPanel;
     
-    private UIManager uiManager;
+    private GameManager gameManager;
 
     private void Awake()
     {
-        uiManager = UIManager.Instance;
+        gameManager = GameManager.Instance;
         SetId();
         SetLevelCount();
         SetGold();
@@ -22,17 +22,17 @@ public class UIMainMenu : MonoBehaviour
     
     private void SetId()
     {
-        idText.text = uiManager.character.id;
+        idText.text = gameManager.character.id;
     }
 
     private void SetLevelCount()
     {
-        LevelCount.text = uiManager.character.level.ToString();
+        LevelCount.text = gameManager.character.level.ToString();
     }
 
     private void SetGold()
     {
-        Gold.text = uiManager.character.gold.ToString();
+        Gold.text = gameManager.character.gold.ToString();
     }
 
     public void OnStatusButton()
