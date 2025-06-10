@@ -5,6 +5,7 @@ public class GameManager : MonoBehaviour
     //싱글톤 선언
     public static GameManager Instance { get; private set; }
     
+    public ItemData itemData { get; set; }
     public Character character { get; set; }
     
     private void Awake()

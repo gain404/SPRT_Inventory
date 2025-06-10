@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 06a022e798755434eb62cacef6ca84fb, type: 3}
-  m_Name: Bow
+  m_Name: Heal Postion
   m_EditorClassIdentifier: 
-  ItemName: "\uD65C"
-  IconImage: {fileID: 21300000, guid: 959f800bf7b6ad84e9d9111f3957c30a, type: 3}
-  description: "\uBB34\uC5C7\uBCF4\uB2E4 \uAC15\uD55C \uD65C"
+  ItemName: "\uD790 \uD3EC\uC158"
+  IconImage: {fileID: 21300000, guid: 7d0a2125231f06b4a8cb1f8075936f0a, type: 3}
+  description: "\uCCB4\uB825\uC744 \uD68C\uBCF5\uC2DC\uCF1C \uC8FC\uB294 \uD3EC\uC158"
   itemType: 0

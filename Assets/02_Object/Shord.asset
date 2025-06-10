@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 06a022e798755434eb62cacef6ca84fb, type: 3}
-  m_Name: Bow
+  m_Name: Shord
   m_EditorClassIdentifier: 
-  ItemName: "\uD65C"
-  IconImage: {fileID: 21300000, guid: 959f800bf7b6ad84e9d9111f3957c30a, type: 3}
-  description: "\uBB34\uC5C7\uBCF4\uB2E4 \uAC15\uD55C \uD65C"
+  ItemName: "\uAC80"
+  IconImage: {fileID: 21300000, guid: 22963f373ae64b84ea5dee0c8d8e8eb2, type: 3}
+  description: "\uBA4B\uC9C4 \uAC80"
   itemType: 0
