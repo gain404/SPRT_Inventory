@@ -16,3 +16,5 @@ MonoBehaviour:
   IconImage: {fileID: 21300000, guid: 959f800bf7b6ad84e9d9111f3957c30a, type: 3}
   description: "\uBB34\uC5C7\uBCF4\uB2E4 \uAC15\uD55C \uD65C"
   itemType: 0
+  isEquipped: 0
+  itemStatus: 10

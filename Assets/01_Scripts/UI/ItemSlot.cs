@@ -8,7 +8,10 @@ public class ItemSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     
     public Image icon;
     public UIFollowCursor cursorObject;
-
+    public GameObject equipObject;
+    
+    private int clickCount = 0;
+    
     private void Awake()
     {
         icon = GetComponent<Image>();
@@ -30,6 +33,62 @@ public class ItemSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         cursorObject.gameObject.SetActive(true);
     }
 
+    public void OnEquipItem()
+    {
+        clickCount++;
+        
+        if (clickCount == 1)
+        {
+            equipObject.SetActive(true);
+            itemData.isEquipped = true;
+            ChangeItemStatus();
+        }
+        else if (clickCount == 2)
+        {
+            equipObject.SetActive(false);
+            itemData.isEquipped = false;
+            DisChanageItemStatus();
+            
+            clickCount = 0;
+        }
+    }
+
+    private void ChangeItemStatus()
+    {
+        switch (itemData.itemType)
+        {
+            case ItemType.Attack:
+                GameManager.Instance.character.status.attack += itemData.itemStatus;
+                break;
+            case ItemType.Defense:
+                GameManager.Instance.character.status.defense += itemData.itemStatus;
+                break;
+            case ItemType.Stamina:
+                GameManager.Instance.character.status.stamina += itemData.itemStatus;
+                break;
+            case ItemType.Object:
+                break;
+        }
+    }
+
+    private void DisChanageItemStatus()
+    {
+        switch (itemData.itemType)
+        {
+            case ItemType.Attack:
+                GameManager.Instance.character.status.attack -= itemData.itemStatus;
+                break;
+            case ItemType.Defense:
+                GameManager.Instance.character.status.defense -= itemData.itemStatus;
+                break;
+            case ItemType.Stamina:
+                GameManager.Instance.character.status.stamina -= itemData.itemStatus;
+                break;
+            case ItemType.Object:
+                break;
+        }
+    }
+    
     public void OnPointerExit(PointerEventData eventData)
     {
         cursorObject.gameObject.SetActive(false);

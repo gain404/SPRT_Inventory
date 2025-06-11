@@ -17,7 +17,7 @@ public class UIStatus : MonoBehaviour
         gameManager = GameManager.Instance;
     }
 
-    private void Start()
+    private void Update()
     {
         SetStatus();
     }
