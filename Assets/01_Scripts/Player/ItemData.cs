@@ -3,9 +3,10 @@ using UnityEngine.UI;
 
 public enum ItemType
 {
-    attack,
-    defense,
-    Object
+    Attack,
+    Defense,
+    Object,
+    Stamina
 }
 
 [CreateAssetMenu]
@@ -16,6 +17,6 @@ public class ItemData : ScriptableObject
     
     public string description;
     public ItemType itemType;
-
-    private ItemSlot itemSlot;
+    public bool isEquipped;
+    public int itemStatus;
 }
