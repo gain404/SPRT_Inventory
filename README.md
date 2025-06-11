@@ -7,7 +7,7 @@ Status 버튼을 누르면 현재 플레이어의 stat이 나오고, Inventory�
 아이템에 마우스를 가져다 대면 아이템의 이름과 설명이 나옵니다.  
 
 ## 🎬시연 영상
-![Image](https://github.com/user-attachments/assets/aef9f75b-1437-416f-94c0-2112adbeff4a)
+![Image](https://github.com/user-attachments/assets/2e67fba7-0af0-4fc4-93c3-90015c7d0c5c)
 
 ## 🏷 Stacks
 <img src="https://img.shields.io/badge/rider-000000?style=for-the-badge&logo=rider&logoColor=white">
